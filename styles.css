@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px 10px 20px; /* Top 10px, Right 40px, Bottom 10px, Left 20px */
+    padding: 10px 20px; /* Padding for overall header */
     color: white;
     box-shadow: 0 4px 2px -2px gray;
 }
@@ -72,27 +72,25 @@ body {
 /* Responsive Header for smaller screens */
 @media (max-width: 768px) {
     .sticky-header {
-        flex-direction: column; /* Stack the logo and navigation vertically */
-        padding: 10px 20px; /* Reduce padding */
+        flex-direction: row; /* Ensure logo and nav are side by side */
+        padding: 10px; /* Adjust padding */
     }
-    
+
     .header-right ul {
-        flex-direction: column; /* Stack the navigation items vertically */
-        align-items: flex-start; /* Align them to the left */
-        width: 100%; /* Make navigation take up the full width */
+        flex-wrap: wrap; /* Wrap items if they overflow */
+        justify-content: flex-end; /* Align to the right */
     }
 
     .header-right ul li {
-        margin-right: 0; /* Remove right margin for stacked items */
-        margin-bottom: 10px; /* Add some space between items */
+        margin-right: 10px; /* Reduce margin between items */
     }
-    
+
     .shop-name {
-        font-size: 1.2em; /* Reduce font size for smaller screens */
+        font-size: 1.3em; /* Adjust font size for smaller screens */
     }
-    
+
     .logo {
-        width: 60px; /* Reduce logo size for smaller screens */
+        width: 60px; /* Adjust logo size for smaller screens */
     }
 }
 
@@ -100,11 +98,11 @@ body {
     .sticky-header {
         padding: 10px; /* Further reduce padding on very small screens */
     }
-    
+
     .shop-name {
-        font-size: 1em; /* Even smaller font size for very small screens */
+        font-size: 1em; /* Smaller font size for very small screens */
     }
-    
+
     .logo {
         width: 50px; /* Smaller logo on very small screens */
     }
