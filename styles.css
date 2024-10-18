@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 40px 10px 20px; /* Top 10px, Right 40px, Bottom 10px, Left 20px */
     color: white;
     box-shadow: 0 4px 2px -2px gray;
 }
@@ -67,6 +67,47 @@ body {
 
 .header-right ul li a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Header for smaller screens */
+@media (max-width: 768px) {
+    .sticky-header {
+        flex-direction: column; /* Stack the logo and navigation vertically */
+        padding: 10px 20px; /* Reduce padding */
+    }
+    
+    .header-right ul {
+        flex-direction: column; /* Stack the navigation items vertically */
+        align-items: flex-start; /* Align them to the left */
+        width: 100%; /* Make navigation take up the full width */
+    }
+
+    .header-right ul li {
+        margin-right: 0; /* Remove right margin for stacked items */
+        margin-bottom: 10px; /* Add some space between items */
+    }
+    
+    .shop-name {
+        font-size: 1.2em; /* Reduce font size for smaller screens */
+    }
+    
+    .logo {
+        width: 60px; /* Reduce logo size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-header {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+    
+    .shop-name {
+        font-size: 1em; /* Even smaller font size for very small screens */
+    }
+    
+    .logo {
+        width: 50px; /* Smaller logo on very small screens */
+    }
 }
 
 /* Products Section */
@@ -121,6 +162,20 @@ h2 {
 ul {
     list-style-type: disc;
     padding-left: 20px;
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 20px 40px 20px 20px; /* Top, Right, Bottom, Left padding */
+    background-color: #f9f9f9; /* Optional background */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: left;
 }
 
 /* Footer */
