@@ -1,0 +1,150 @@
+/* General styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+body {
+    padding-top: 60px; /* Offset to prevent content from being hidden under the sticky header */
+}
+
+/* Sticky header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    color: white;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Header left section */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.shop-name {
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+}
+
+/* Navigation (Header right section) */
+.header-right ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right ul li {
+    margin-right: 20px;
+}
+
+.header-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.header-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Products Section */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows products to wrap on small screens */
+    justify-content: space-between; /* Space products evenly */
+    gap: 20px; /* Add space between items */
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 20px); /* Make each product take up 1/3rd of the container */
+    text-align: center;
+    min-width: 250px; /* Minimum width for each product */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.product img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    max-width: 200px; /* Limit max width for images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Services Section */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
