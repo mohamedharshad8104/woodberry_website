@@ -5,7 +5,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-    background-color: #d45252;
+    background-color: #c2e3d5;
 }
 
 body {
@@ -18,14 +18,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(69, 93, 58, 0.8); /* Light background with transparency */
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; /* Padding for overall header */
-    color: white;
+    color: black; /* Change text color for better contrast */
     box-shadow: 0 4px 2px -2px gray;
+    
 }
 
 /* Header left section */
@@ -42,7 +43,7 @@ body {
 .shop-name {
     font-size: 1.5em;
     margin: 0;
-    color: white;
+    color: black; /* Change text color for better contrast */
 }
 
 /* Navigation (Header right section) */
@@ -59,7 +60,7 @@ body {
 }
 
 .header-right ul li a {
-    color: white;
+    color: black; /* Change text color for better contrast */
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s;
@@ -178,7 +179,7 @@ ul {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: rgba(69, 93, 58, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
